@@ -49,11 +49,9 @@ public class BolsaFichas
         int idFicha = _rnd.Next(_fichasComodines.Count);
         Ficha fichaSacada = _fichasComodines[idFicha];
         fichaSacada.orientacion = "V";
-        var remove = _fichasComodines.Remove(fichaSacada);
-        foreach (var fichaComodin in _fichasComodines)
-        {
-            _fichas.Add(fichaComodin);
-        }
+        fichaSacada.posiciones.AddRange(new List<(int, int)>{(1, 0), (0, 0), (-1, 0)});
+        _fichasComodines.Remove(fichaSacada);
+        foreach (var fichaComodin in _fichasComodines) _fichas.Add(fichaComodin);
         _fichasComodines.Clear();
         return fichaSacada;
     }
@@ -65,6 +63,5 @@ public class BolsaFichas
         _fichas.Remove(fichaSacada);
         return fichaSacada;
     }
-    
     
 }

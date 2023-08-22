@@ -4,7 +4,9 @@ public class Juego
 {
     public Juego()
     {
+        var tablero = new Tablero();
         var bolsaFichas = new BolsaFichas();
-        bolsaFichas.SacarComodinInicial();
+        tablero.AgregarFicha(bolsaFichas.SacarComodinInicial());
     }
 }
+dfs+} s

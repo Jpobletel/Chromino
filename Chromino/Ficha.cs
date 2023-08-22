@@ -6,6 +6,8 @@ public class Ficha
     public string valor2 { get; }
     public string valor3 { get; }
 
+    public List<(int, int)> posiciones = new();
+    
     public string orientacion = "null";
 
     public Ficha(string valor1, string valor2, string valor3)

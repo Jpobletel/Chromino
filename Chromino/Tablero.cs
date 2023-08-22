@@ -2,5 +2,7 @@ namespace Chromino;
 
 public class Tablero
 {
-    //work in progress xd
+    private List<Ficha> _fichasEnMesa = new();
+()
+    public void AgregarFicha(Ficha ficha) => _fichasEnMesa.Add(ficha);
 }
