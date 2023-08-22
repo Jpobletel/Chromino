@@ -6,6 +6,8 @@ public class Ficha
     public string valor2 { get; }
     public string valor3 { get; }
 
+    public string orientacion = "null";
+
     public Ficha(string valor1, string valor2, string valor3)
     {
         this.valor1 = valor1;
