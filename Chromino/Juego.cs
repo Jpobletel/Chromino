@@ -6,7 +6,8 @@ public class Juego
     {
         var tablero = new Tablero();
         var bolsaFichas = new BolsaFichas();
+        var vista = new Vista();
         tablero.AgregarFicha(bolsaFichas.SacarComodinInicial());
+        vista.MostrarTablero(tablero);
     }
 }
-dfs+} s
