@@ -1,8 +1,12 @@
+using System.Collections;
+
 namespace Chromino;
 
 public class Jugadores
 {
     private List<Jugador> _jugadores;
+
+    public List<Jugador> ObtenerJugadores() => _jugadores;
 
     public Jugadores()
     {
@@ -11,12 +15,5 @@ public class Jugadores
             _jugadores.Add(new Jugador());
     }
     public Jugador ObtenerJugador(int idJugador) => _jugadores[idJugador];
-
-    public void EmpezarJuego()
-    {
-        foreach (var jugador in _jugadores)
-        {
-            
-        }
-    }
+    
 }

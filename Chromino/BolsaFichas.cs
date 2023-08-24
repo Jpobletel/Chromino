@@ -7,12 +7,7 @@ public class BolsaFichas
     private readonly List<string> _colores = new() { "G","R","Y","P","B" }; 
     private Random _rnd = new Random();
 
-    public BolsaFichas()
-    {
-        GenerarFichas();
-        Console.WriteLine(_fichas.Count);
-    }
-
+    public BolsaFichas() => GenerarFichas();
     private void GenerarFichas()
     {
         for (var index = 0; index < _colores.Count; index++)
@@ -33,7 +28,6 @@ public class BolsaFichas
             }
         }
     }
-
     private bool CheckDup(Ficha ficha, List<Ficha> bolsa)
     {
         foreach (var f in bolsa)
@@ -56,7 +50,7 @@ public class BolsaFichas
         return fichaSacada;
     }
     
-    private Ficha SacarFichaAlAzar()
+    public Ficha SacarFichaAlAzar()
     {
         int idFicha = _rnd.Next(_fichas.Count);
         Ficha fichaSacada = _fichas[idFicha];
