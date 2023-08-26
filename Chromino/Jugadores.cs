@@ -12,7 +12,7 @@ public class Jugadores
     {
         _jugadores = new List<Jugador>();
         for(int i = 0; i < 4; i++)
-            _jugadores.Add(new Jugador());
+            _jugadores.Add(new Jugador(i));
     }
     public Jugador ObtenerJugador(int idJugador) => _jugadores[idJugador];
     

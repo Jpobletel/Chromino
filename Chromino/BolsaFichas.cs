@@ -43,7 +43,7 @@ public class BolsaFichas
         int idFicha = _rnd.Next(_fichasComodines.Count);
         Ficha fichaSacada = _fichasComodines[idFicha];
         fichaSacada.orientacion = "V";
-        fichaSacada.posiciones.AddRange(new List<(int, int)>{(1, 0), (0, 0), (-1, 0)});
+        fichaSacada.posiciones.AddRange(new List<(int, int)>{(-1, 0), (0, 0), (1, 0)});
         _fichasComodines.Remove(fichaSacada);
         foreach (var fichaComodin in _fichasComodines) _fichas.Add(fichaComodin);
         _fichasComodines.Clear();

@@ -27,6 +27,7 @@ public class Juego
             _vista.MostrarMano(jugadorActual);
             jActual += 1;
             if(jActual == 4) jActual = 0;
+            termino = true;
         }
         _vista.MostrarTablero(_tablero);
     }
