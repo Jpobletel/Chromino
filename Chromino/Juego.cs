@@ -19,15 +19,14 @@ public class Juego
             for (var i = 0; i < 8; i++) 
                 jugador.AgregarFichaAMano(_bolsaFichas.SacarFichaAlAzar());
 
-        // ReSharper disable once LoopVariableIsNeverChangedInsideLoop
-        while (!termino)
+
+        for (int i= 0; i < 4; i++) //Para que se muestre que se repartieron a los 4 jugadores
         {
             _vista.MostrarTablero(_tablero);
             var jugadorActual = _jugadores.ObtenerJugador(jActual);
             _vista.MostrarMano(jugadorActual);
             jActual += 1;
             if(jActual == 4) jActual = 0;
-            termino = true;
         }
         _vista.MostrarTablero(_tablero);
     }
